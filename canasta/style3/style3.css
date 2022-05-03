@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.main-width{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+.hero{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url(/canasta/style3/images/back3.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+header{
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .hamb{
+    width: 35px;
+    height: 24px;
+    right: 3%;
+    z-index: 5;
+    background: transparent;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+}
+
+nav .hamb span{
+    display: block;
+    background: rgb(185, 178, 77);
+    width: 100%;
+    height: 3px;
+    transition: .3s;
+    transition-property: transform, opacity;
+}
+
+nav .hamb span:nth-child(2){
+    margin: 7px 0px;
+}
+
+nav .nav-list{
+    list-style: none;
+}
+
+nav .nav-list li{
+    display: inline-block;
+}
+
+nav .nav-list li a{
+    display: inline-block;
+    color: rgb(241, 241, 241);
+    margin-left: 55px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+nav .nav-list li a:hover{
+    color: rgb(186, 172, 50);
+    transition: .4s;
+}
+
+.container .hero-text h1{
+    color: #fff;
+    font-size: 100px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+span{
+    color: rgb(242, 247, 99);
+    font-size: 28px;
+}
+
+@media screen and (max-width: 930px){
+    nav .hamb{
+        display: initial;
+    }
+    .click{
+        top: 46px;
+    }
+    .click span{
+        position: absolute;
+        margin-top: 12px;
+    }
+    .click span:first-child{
+        transform: rotate(-40deg);
+    }
+    .click span:nth-child(2){
+        opacity: 0;
+        margin: 0;
+    }
+    .click span:last-child{
+        transform: rotate(40deg);
+        top: 0;
+    }
+    nav .nav-list{
+        position: absolute;
+        top: 100px;
+        right: -65%;
+        bottom: 0;
+        width: 50%;
+        height: 50%;
+        background: rgb(182, 152, 75);
+        z-index: 2;
+        padding: 6% 9%;
+        transition: .3s right;
+    }
+    nav .nav-list li{
+        display: block;
+    }
+    nav .nav-list li a{
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        margin-left: 0;
+        margin-bottom: 45px;
+    }
+    nav .nav-list.open{
+        right: 0;
+    }
+}
+
+
+
